@@ -34,3 +34,7 @@ Route::get('/contact', function () {
 Route::get('/history', function () {
     return view('history');
 });
+
+Route::get('/gallery', function () {
+    return view('gallery');
+});

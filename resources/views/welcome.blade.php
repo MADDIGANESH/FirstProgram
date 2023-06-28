@@ -12,12 +12,10 @@
     <h1>Hello lervel..!!! welcome...! </h1>
     </section>
     <section  class="menu">
-    <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">contact</a></li>
-            <li><a href="/history">History</a></li>
-    </ul>
+
+    @include('snippets.menu')
+
     </section>
+    @include('snippets.logo')
 </body>
 </html>

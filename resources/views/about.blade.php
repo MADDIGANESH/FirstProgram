@@ -11,12 +11,9 @@
     <h1>This is about page..!!! </h1>
     </section>
     <section  class="menu">
-    <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">contact</a></li>
-            <li><a href="/history">History</a></li>
-    </ul>
+        
+    @include('snippets.logo')
+    @include('snippets.menu')
 
     </section>
 </body>
