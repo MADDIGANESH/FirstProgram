@@ -1,1 +1,2 @@
-<img src="https://learn.packetprep.com/img/file_pp_logo_dark.png" width=400px hight=500  />
+
+<img src="https://learn.packetprep.com/img/file_pp_logo_dark.png" width=800px hight=50  />

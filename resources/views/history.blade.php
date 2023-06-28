@@ -12,7 +12,6 @@
     </section>
     <section  class="menu">
         
-    @include('snippets.logo') 
     @include('snippets.menu')
 
     </section>
