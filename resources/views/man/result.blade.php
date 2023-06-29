@@ -8,19 +8,15 @@
 
 </head>
 <body>
-<body class="bg-dark-subtle">
-    <section class="contaner bg-warning-subtle p-5 my-5">
-    <h1><center> String Manipulator result</center></h1>
+<body class="bg-dark-subtle  p-4 m-5">
+    <section class=" bg-warning-subtle p-4 m-3 ">
+    <h1><center>String Result</center></h1>
     <hr>
-    <div >value of string is {{$str}} </div>
-    <div>value of opr is {{$opr}} </div>
-    <hr>
-    <div>the result is {{$result}} </div>
+    <div><b> the string  is   : {{$str}}</b> </div><br>
+    <div><b> the result is    : {{$result}}</b> </div>
     <center>
-    <a class="btn btn-primary" href="/mn/form1"> Back to Form </a><center>
-    </section>
-       
-        
+    <a class="btn btn-primary" href="/man/form"> Back to Form </a><center>
+    </section>  
     </form>
         
 </body>

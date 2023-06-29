@@ -62,15 +62,10 @@ Route::get('/calculator/result', function () {
     ->with('opr',$opr);
 });
 
-
-
-
-Route::get('/mn/form1', function () {
-    return view('mn.form1');
+Route::get('/man/form', function () {
+    return view('man.form');
 });
-
-Route::get('/mn/result1', function () {
-   
+Route::get('/man/result', function () {
     $str=request()->get('str');
     $opr=request()->get('opr');
     $result=null;
@@ -81,6 +76,9 @@ Route::get('/mn/result1', function () {
     $result=str_word_count($str);
     elseif($opr=='noofl')
     $result=strlen($str);
-    return view('mn.result1');
-    
+    return view('man.result')
+    ->with('result',$result)
+    ->with('str',$str)
+    ->with('opr',$opr);
 });
+

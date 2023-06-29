@@ -8,15 +8,15 @@
 
 </head>
 <body>
-<body class="bg-dark-subtle">
-    <section class="contaner bg-warning-subtle p-5 my-5">
+<body class="bg-dark-subtle p-4 m-5">
+    <section class="contaner bg-warning-subtle p-4 my-3">
     <h1><center>Calculator result</center></h1>
+    <hr><b>
+    <div >value of a is :&emsp;&emsp;&nbsp;{{$a}} </div>
+    <div>value of b is :&emsp;&emsp; {{$b}} </div>
+    <div>value of opr is :&emsp; {{$opr}} </div>
     <hr>
-    <div >value of a is {{$a}} </div>
-    <div>value of b is {{$b}} </div>
-    <div>value of opr is {{$opr}} </div>
-    <hr>
-    <div>the result is {{$result}} </div>
+    <div>the result is : &emsp;{{$result}} </div></b><br>
     <center>
     <a class="btn btn-primary" href="/calculator/form"> Back to Form </a><center>
     </section>
