@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body class="bg-success p-5 m-5 text-dark bg-opacity-25">
-    <section class="contaner p-1 m-5 bg-primary border border-black">
+    <section class=" p-1 m-5 bg-warning border border-black">
     <h1><center>Calculator</center></h1></section>
     
     <form class="bg-warning p-5 m-5" action="/calculator/result" method="get" >

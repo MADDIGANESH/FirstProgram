@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body class="bg-danger-subtle p-5 m-5 text-dark bg-opacity-20" >
-    <section class="bg-warning p-1 m-5 border border-black">
+    <section class="bg-dark-subtle p-1 m-5 border border-black">
     <h1><center> StringManipulator App</center></h1></section>
     
     <form class="bg-info-subtle p-5 m-5" action="/man/result" method="get" >
