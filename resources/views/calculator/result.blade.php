@@ -9,7 +9,7 @@
 </head>
 <body>
 <body class="bg-dark-subtle p-4 m-5">
-    <section class="contaner bg-warning-subtle p-4 my-3">
+    <section class=" bg-warning-subtle  border border-black p-4 my-3">
     <h1><center>Calculator result</center></h1>
     <hr><b>
     <div >value of a is :&emsp;&emsp;&nbsp;{{$a}} </div>

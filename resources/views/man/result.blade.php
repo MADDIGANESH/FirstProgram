@@ -9,7 +9,7 @@
 </head>
 <body>
 <body class="bg-dark-subtle  p-4 m-5">
-    <section class=" bg-warning-subtle p-4 m-3 ">
+    <section class=" bg-warning-subtle  border border-black p-4 m-3 ">
     <h1><center>String Result</center></h1>
     <hr>
     <div><b> the string  is   : {{$str}}</b> </div><br>

@@ -10,7 +10,7 @@
     <section class="bg-dark-subtle p-1 m-5 border border-black">
     <h1><center> StringManipulator App</center></h1></section>
     
-    <form class="bg-info-subtle p-5 m-5" action="/man/result" method="get" >
+    <form class="bg-info-subtle  border border-black p-5 m-5" action="/man/result" method="get" >
     <div class="row">
     <div class="col ">
     <label for="formGroupExampleInput" class="form-label p-1 m-1">Enter String  :</label><br>
