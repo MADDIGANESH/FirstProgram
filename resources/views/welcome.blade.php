@@ -9,12 +9,17 @@
 </head>
     
 <body>
+<section  class="menu"><center>
+
+@include('snippets.menu')</center>
+
+</section>
 
     <section class="contaner">
     @include('snippets.logo')
     <marquee class="mrq" >
     <h1 > Hello ..!!! welcome...! </h1></marquee><br><hr><br>
-    <p class="sun"><b>contect : xxxxxxxxxx &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <p class="sun"><b>contect : xxxxxxxxxx &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
         address : xxxxxxxxxx  </b></p>
     </b></p>
     <center>  
@@ -61,11 +66,6 @@
 
 
     </section>
-    <section  class="menu"><center>
-
-    @include('snippets.menu')</center>
-
-    </section>
-    
+   
 </body>
 </html>
