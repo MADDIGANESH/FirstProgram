@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CalculatorController;
+use App\Http\Controllers\stringcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +72,7 @@ Route::get('/man/result', function () {
     $opr=request()->get('opr');
     $result=null;
 
-    if($opr=='str')
+    if($opr=='srv')
     $result=strrev($str);
     elseif($opr=='noofw')
     $result=str_word_count($str);
@@ -87,6 +88,17 @@ Route::get('/man/result', function () {
 Route::get('/calculator/form', [CalculatorController::class, 'form']);
 Route::get('/calculator/result', [CalculatorController::class, 'result']);
 Route::get('/calculator/logs', [CalculatorController::class, 'logs']);
+
+Route::get('/string/form', function () {
+});
+
+Route::get('/string/result', function () {
+});
+
+
+Route::get('/man/form', [stringcontroller::class, 'form']);
+Route::get('/man/result', [stringcontroller::class, 'result']);
+Route::get('/man/logs', [stringcontroller::class, 'logs']);
 
 Route::get('/string/form', function () {
 });

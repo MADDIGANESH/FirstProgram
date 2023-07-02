@@ -26,6 +26,7 @@
         </div>
         <div >
         <button type="submit" class="btn btn-success p-2 m-2">Submit</button>
+        <a href="/man/logs" class="btn btn-success p-2 m-2">logs</a>
         </div>
 
 </form>         
