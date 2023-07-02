@@ -8,20 +8,20 @@
 </head>
 <body class="bg-success p-5 m-5 text-dark bg-opacity-25">
     <section class=" p-1 m-5 bg-warning border border-black">
-    <h1><center>Calculator</center></h1></section>
+    <h1><center>CALCULATOR</center></h1></section>
     
     <form class="bg-warning  border border-black p-5 m-5" action="/calculator/result" method="get" >
     <div class="row">
     <div class="col ">
-    <label for="formGroupExampleInput" class="form-label p-1 m-1">Enter A value :</label><br>
+    <label for="formGroupExampleInput" class="form-label p-1 m-1"><b>Enter A value :</b></label><br>
     <input type="text" class="form-control" name="a" placeholder="Enter here" aria-label="First name">
     </div>
      <div class="col" >
-     <label for="formGroupExampleInput" class="form-label p-1 m-1">Enter B value :</label><br>
+     <label for="formGroupExampleInput" class="form-label p-1 m-1"><b>Enter B value :</b></label><br>
     <input type="text" class="form-control" name="b" placeholder="Enter here" aria-label="Last name">
     </div>
     <div class="col-md-4 p-1 m-1">
-    <label for="inputState" class="form-label"> Operation :</label>
+    <label for="inputState" class="form-label"> <b>Operation :</b></label>
     <select id="inputState" name="opr" class="form-select">
       <option value="add">Addition</option>
       <option value="sub">Subtraction</option>
@@ -29,8 +29,8 @@
         </select>
         </div>
         <div>
-        <button type="submit" class="btn btn-success p-2 m-2">Submit</button>
-        <a href="/calculator/logs" class="btn btn-success p-2 m-2">logs</a>
+        <button type="submit" class="btn btn-success p-2 m-2"><b>Submit</b></button>
+        <a href="/calculator/logs" class="btn btn-success p-2 m-2"><b>logs</b></a>
         </div>
 </form> 
 

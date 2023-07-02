@@ -18,7 +18,8 @@
     <hr>
     <div>the result is : &emsp;{{$result}} </div></b><br>
     <center>
-    <a class="btn btn-primary" href="/calculator/form"> Back to Form </a><center>
+    <a class="btn btn-primary" href="/calculator/form"> Back to Form </a>
+    </center>
     </section>
        
         

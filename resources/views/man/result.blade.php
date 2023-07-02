@@ -15,9 +15,9 @@
     <div><b> the string  is   : {{$str}}</b> </div><br>
     <div><b> the string  is   : {{$opr}}</b> </div><br>
     <div><b> the result is    : {{$result}}</b> </div>
-    
+    <center>
     <a class="btn btn-primary" href="/man/form"> Back to Form </a>
-
+    </center>
     </section>  
     </form>
         

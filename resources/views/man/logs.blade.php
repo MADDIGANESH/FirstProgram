@@ -13,10 +13,11 @@
     <section class=" container bg-light-subtle p-5 mx-auto my-5">
         <h1 ><center>String Manipulator</center></h1>
         <hr>
-        <table class="table table-striped">
+        <br>
+        <table class="table table-striped table-dark table-bordered border-primary p-4 my-3 ">
             <thead class="thead-dark">
                 <tr>
-                    <th scope=" col">id</th>
+                    <th scope="col">id</th>
                     <th scope="col">string</th>
                     <th scope="col">opr</th>
                     <th scope="col">result</th>

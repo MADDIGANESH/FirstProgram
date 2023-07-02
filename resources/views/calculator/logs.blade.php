@@ -9,12 +9,13 @@
 
 </head>
 
-<body class="bg-info-subtle">
+<body class="bg-info-subtle ">
     <section class=" container bg-light-subtle p-5 mx-auto my-5">
-        <h1 ><center>Calcualtor Logs</center></h1>
+        <h1 ><center>Calculator Log's</center></h1>
         <hr>
-        <table class="table table-striped">
-            <thead class="thead-dark">
+        <br>
+        <table class="table table-danger  table-bordered border-primary p-4 my-3">
+            <thead class="table-dark">
                 <tr>
                     <th scope=" col">id</th>
                     <th scope="col">a</th>
@@ -27,7 +28,7 @@
             </thead>
             <tbody>
                 @foreach($data as $d)
-                <tr>
+                <tr class=>
                     <th scope="row">{{$d->id}}</th>
                     <td>{{$d->a}}</td>
                     <td>{{$d->b}}</td>
@@ -39,9 +40,10 @@
                 @endforeach
             </tbody>
         </table>
-
+        <br>
+        <center>
         <a class="btn btn-primary" href="/calculator/form"> back to form</a>
-
+        </center>
     </section>
 </body>
 
