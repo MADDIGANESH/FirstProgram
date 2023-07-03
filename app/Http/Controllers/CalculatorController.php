@@ -59,10 +59,136 @@ class CalculatorController extends Controller
     public function logs()
     {
         $calc = new Calculator();
+
         $data = $calc->all();
 
-        
-
         return view('calculator.logs')->with('data', $data);
+         echo "opr - ".$d->opr."<br>";
+
+       
     }
+
+    public function queries()
+    {
+        $calc = new Calculator();
+        
+        // filter = all =>list all data
+        // filter = first =>dishplay first record
+        // filter = last => dishplay last record
+        // filter = top3 => dishplay top 3 records 
+        // filter = reverse => dishplay value desc order
+
+
+        $filter = request()->get('filter');
+        $value = request()->get('value');
+
+        if($filter=='all') {
+
+             $data=$calc->all();
+            echo "all records ".$data->count()."<br><br>";
+       
+                     // if(request()->get('all')==1){
+
+                    // $data=$calc->where('opr','add')->get();
+       
+                     // $data=$calc->where('opr','!=','add')->get();
+      
+                     //opr-> colomn name  != -> comparisen add -> value
+
+                     // $data=$calc->where('created_at','<','2023-07-02 14:31:42')->get();
+        
+                     // $data=$calc->where('created_at','>=','2023-07-02 14:31:42')->get();
+         
+                     //to get all records some condistions on where  
+                    
+                    // $data=$calc->where('created_at','>=','2023-07-02 14:31:42')
+                    // ->get();
+        
+                // $data=$calc->where('created_at','>=','2023-07-02 14:31:42')
+                //     ->orderby('id','desc')->get();
+        
+                    foreach($data as $d){
+                        echo "id - ".$d->id." | ";
+                        echo "a - ".$d->a." | ";
+                        echo "b - ".$d->b." | ";
+                        echo "opr - ".$d->opr." | ";
+                        echo "created_at - ".$d->created_at."<br><br>";
+                    }
+        
+                  }
+        
+               
+        
+                //where is used as a condation on the table get will return a collection 
+                   // collection of records
+                // first() will return the first record
+
+                //this will be first record
+                
+                if($filter=='first'){
+                        
+                        
+                        $data=$calc->first();
+                         echo "first records ".$data->count()."<br><br>";
+                        
+                        // foreach($data as $d){
+                            echo "id - ".$data->id." | ";
+                            echo "a - ".$data->a." | ";
+                            echo "b - ".$data->b." | ";
+                            echo "opr - ".$data->opr." | ";
+                            echo "created_at - ".$data->created_at."<br><br>";
+                       //  }
+                }
+
+                //this will be last record
+
+                if($filter=='last'){
+                        
+                        
+                    $data=$calc->orderby('id','desc')->first();
+                     echo "last records ".$data->count()."<br><br>";
+                    
+                    // foreach($data as $d){
+                        echo "id - ".$data->id." | ";
+                        echo "a - ".$data->a." | ";
+                        echo "b - ".$data->b." | ";
+                        echo "opr - ".$data->opr." | ";
+                        echo "created_at - ".$data->created_at."<br><br>";
+                   //  }
+                    }
+                    // this will be top 3
+
+                   if($filter=='top'){
+                        
+                    $data=$calc->limit(3)->get();
+                    
+                    echo "top3 records ".$data->count()."<br><br>";
+                    
+                    // foreach($data as $d){
+                        echo "id - ".$data->id." | ";
+                        echo "a - ".$data->a." | ";
+                        echo "b - ".$data->b." | ";
+                        echo "opr - ".$data->opr." | ";
+                        echo "created_at - ".$data->created_at."<br><br>";
+                   //  }
+                    }
+
+                    //this will be reverse
+
+                    if($filter=='rev'){
+                        
+                        
+                        $data=$calc->orderby('id','desc')->get();
+                         echo "reverse records ".$data->count()."<br><br>";
+                        
+                        // foreach($data as $d){
+                            echo "id - ".$data->id." | ";
+                            echo "a - ".$data->a." | ";
+                            echo "b - ".$data->b." | ";
+                            echo "opr - ".$data->opr." | ";
+                            echo "created_at - ".$data->created_at."<br><br>";
+                       //  }
+                }
+
+         }
 }

@@ -88,6 +88,7 @@ Route::get('/man/result', function () {
 Route::get('/calculator/form', [CalculatorController::class, 'form']);
 Route::get('/calculator/result', [CalculatorController::class, 'result']);
 Route::get('/calculator/logs', [CalculatorController::class, 'logs']);
+Route::get('/calculator/queries', [CalculatorController::class, 'queries']);
 
 Route::get('/string/form', function () {
 });
