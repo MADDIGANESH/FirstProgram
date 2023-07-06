@@ -89,6 +89,15 @@ Route::get('/calculator/form', [CalculatorController::class, 'form']);
 Route::get('/calculator/result', [CalculatorController::class, 'result']);
 Route::get('/calculator/logs', [CalculatorController::class, 'logs']);
 Route::get('/calculator/queries', [CalculatorController::class, 'queries']);
+//Route::get('/calculator/edit{id}', [CalculatorController::class, 'editid']);
+//Route::get('/calculator/edit/{id}', [CalculatorController::class, 'editid'])->name('calculator.edit');
+//Route::post('edit/{id}', 'CalculatorControll@edit');
+Route::get('/calculator/show/{id}', [CalculatorController::class, 'show']);
+Route::get('/calculator/edit/{id}', [CalculatorController::class, 'edit']);
+Route::post('/calculator/save/{id}', [CalculatorController::class, 'save']);
+Route::post('calculator/destroy/{id}', [CalculatorController::class, 'destroy']);
+
+
 
 Route::get('/string/form', function () {
 });

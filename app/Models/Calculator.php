@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Calculator extends Model
 {
     use HasFactory;
+    protected $fillable = ['a','b','opr','result'];
 }

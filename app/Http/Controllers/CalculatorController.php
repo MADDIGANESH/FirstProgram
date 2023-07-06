@@ -10,6 +10,63 @@ class CalculatorController extends Controller
     /**
      * Form method will show the form page from view
      */
+        
+     public function show($id)
+     {
+        $alert  = request()->session()->get('alert');
+        // $r=DB::table('calculators')->where('id',$id)->first();
+         //$r=DB::table('calculators')->find($id);
+         $rec=calculator::find($id);
+       return view('calculator.show')->with('data',$rec)->with('alert' , $alert);
+        
+     }
+
+
+     public function edit($id)
+    {
+        $data=Calculator::where('id',$id)->first();
+       return view('calculator.edit')->with('data',$data);
+       
+    }
+
+    //savedata
+
+    public function save($id)
+    {
+      
+      $rec=Calculator::find($id);
+      $data=request()->all();
+      
+   // $rec=Calculator::where('id',$id)->first();
+    //dd($rec);
+    
+     //$rec=Calculator::find('id',$id)->first();
+    
+     
+  
+    //return view('calculator.edit')->with('data',$data);
+    
+        $rec->a=request()->get('a');
+        $rec->b=request()->get('b');
+        $rec->opr=request()->get('opr');
+        if(request()->get('opr')=='add')
+        $rec->result=$rec->a + $rec->b;
+        else if(request()->get('opr')=='sub')
+        $rec->result=$rec->a - $rec->b;
+        else if(request()->get('opr')=='mul')
+        $rec->result=$rec->a * $rec->b;
+        $rec->save();
+        $alert ="you have succesfully updated (" .$rec->id.")";
+        return redirect()->to('calculator/show/'.$id)
+        ->with('alert' , $alert);
+}
+public function destroy($id){
+    $rec=calculator::find($id);
+    if($rec)
+    $rec->delete();
+    return redirect()->to('calculator/logs/');
+}
+
     public function form()
     {
         return view('calculator.form');
@@ -28,9 +85,9 @@ class CalculatorController extends Controller
         $result = null;
 
 
+         // process the requested operation (business logic)
 
-        // process the requested operation (business logic)
-        if ($opr == 'add')
+         if ($opr == 'add')
             $result = $a + $b;
         else if ($opr == 'sub')
             $result = $a - $b;
@@ -89,7 +146,7 @@ class CalculatorController extends Controller
        
                      // if(request()->get('all')==1){
 
-                    // $data=$calc->where('opr','add')->get();
+                      // $data=$calc->where('opr','add')->get();
        
                      // $data=$calc->where('opr','!=','add')->get();
       
@@ -101,11 +158,11 @@ class CalculatorController extends Controller
          
                      //to get all records some condistions on where  
                     
-                    // $data=$calc->where('created_at','>=','2023-07-02 14:31:42')
-                    // ->get();
+                      // $data=$calc->where('created_at','>=','2023-07-02 14:31:42')
+                     // ->get();
         
-                // $data=$calc->where('created_at','>=','2023-07-02 14:31:42')
-                //     ->orderby('id','desc')->get();
+                      // $data=$calc->where('created_at','>=','2023-07-02 14:31:42')
+                       //     ->orderby('id','desc')->get();
         
                     foreach($data as $d){
                         echo "id - ".$d->id." | ";
@@ -164,30 +221,30 @@ class CalculatorController extends Controller
                     
                     echo "top3 records ".$data->count()."<br><br>";
                     
-                    // foreach($data as $d){
-                        echo "id - ".$data->id." | ";
-                        echo "a - ".$data->a." | ";
-                        echo "b - ".$data->b." | ";
-                        echo "opr - ".$data->opr." | ";
-                        echo "created_at - ".$data->created_at."<br><br>";
-                   //  }
+                    foreach($data as $d){
+                        echo "id - ".$d->id." | ";
+                        echo "a - ".$d->a." | ";
+                        echo "b - ".$d->b." | ";
+                        echo "opr - ".$d->opr." | ";
+                        echo "created_at - ".$d->created_at."<br><br>";
+                     }
                     }
 
                     //this will be reverse
 
                     if($filter=='rev'){
                         
-                        
                         $data=$calc->orderby('id','desc')->get();
                          echo "reverse records ".$data->count()."<br><br>";
                         
-                        // foreach($data as $d){
-                            echo "id - ".$data->id." | ";
-                            echo "a - ".$data->a." | ";
-                            echo "b - ".$data->b." | ";
-                            echo "opr - ".$data->opr." | ";
-                            echo "created_at - ".$data->created_at."<br><br>";
-                       //  }
+                        foreach($data as $d){
+                            echo "id - ".$d->id." | ";
+                            echo "a - ".$d->a." | ";
+                            echo "b - ".$d->b." | ";
+                            echo "opr - ".$d->opr." |  <br><br>";
+                           // echo "created_at - ".$data->created_at."
+                          
+                         }
                 }
 
          }
