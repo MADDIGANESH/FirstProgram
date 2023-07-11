@@ -7,6 +7,16 @@ use App\Models\Calculator;
 
 class CalculatorController extends Controller
 {
+
+    public function api($id){
+
+       //$alert  = request()->session()->get('alert');
+       $rec=calculator::find($id);  
+      // dd($rec);      
+       return $rec;
+
+    }
+
     /**
      * Form method will show the form page from view
      */

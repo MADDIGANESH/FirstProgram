@@ -22,7 +22,7 @@ Route::get('/',function() {
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/about', function () {
     return view('about');
@@ -84,18 +84,23 @@ Route::get('/man/result', function () {
     ->with('opr',$opr);
 });
 
+Route::middleware('auth')->group(function () {
 
-Route::get('/calculator/form', [CalculatorController::class, 'form']);
+Route::get('/calculator/form', [CalculatorController::class, 'form'])->name('calculator.form');
 Route::get('/calculator/result', [CalculatorController::class, 'result']);
 Route::get('/calculator/logs', [CalculatorController::class, 'logs']);
+//Route::get('/calculator/show/{id}', [CalculatorController::class, 'show']);
+
+});
+
+Route::get('calculator/show/{id}', [CalculatorController::class, 'api']);
 Route::get('/calculator/queries', [CalculatorController::class, 'queries']);
-//Route::get('/calculator/edit{id}', [CalculatorController::class, 'editid']);
 //Route::get('/calculator/edit/{id}', [CalculatorController::class, 'editid'])->name('calculator.edit');
-//Route::post('edit/{id}', 'CalculatorControll@edit');
-Route::get('/calculator/show/{id}', [CalculatorController::class, 'show']);
+
 Route::get('/calculator/edit/{id}', [CalculatorController::class, 'edit']);
 Route::post('/calculator/save/{id}', [CalculatorController::class, 'save']);
 Route::post('calculator/destroy/{id}', [CalculatorController::class, 'destroy']);
+
 
 
 
@@ -115,3 +120,15 @@ Route::get('/string/form', function () {
 
 Route::get('/string/result', function () {
 });
+
+Route::get('/dashboard', function () {
+    return redirect()->route('home');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
